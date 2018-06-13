@@ -11,7 +11,7 @@ app.get('/', function(req, res) {
 
 .get('/chez-moi', function(req, res) {
     res.setHeader('Content-type', 'text/plain');
-    res.send('Vous êtes chez moi bande de petit **** de ****. \n OUST')
+    res.send('Vous êtes chez moi bande de petit **** de ****. \n OUST TOTO')
 })
 
 .get('/:etagenum/etage', function(req, res) {
