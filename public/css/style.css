@@ -1,0 +1,36 @@
+#global { /*stats*/
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
+#divLignes { /*ligneDommage*/
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+#topButton { /*topbutton*/
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
+#botButton { /*botbutton*/
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+#dommageInput {
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+}
+
+#statsInput {
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+}
+

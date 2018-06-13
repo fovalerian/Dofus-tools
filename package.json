@@ -1,0 +1,14 @@
+{
+    "name": "dofus-tool",
+    "version": "0.1.0",
+    "dependencies": {
+        "body-parser": "~1.10.1",
+        "cookie-session": "~1.1.0",
+        "ejs": "~2.1.4",
+        "express": "^4.11.2",
+        "path": "^0.12.7",
+        "twig": "^1.11.1"
+    },
+    "author": "Louva <val.fournaise@gmail.com>",
+    "description": "Calculatrice pour dofus"
+}
