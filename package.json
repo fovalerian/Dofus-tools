@@ -7,6 +7,7 @@
         "ejs": "~2.1.4",
         "express": "^4.11.2",
         "path": "^0.12.7",
+        "pm2": "^2.10.4",
         "twig": "^1.11.1"
     },
     "author": "Louva <val.fournaise@gmail.com>",
