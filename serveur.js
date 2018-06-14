@@ -6,9 +6,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'html');
 
 app.get('/', function(req, res) {
-
-
-
     res.render('index.html.twig')
 })
 

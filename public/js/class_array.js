@@ -44,13 +44,16 @@ $(document).ready(function() {
                         }
                         classProperties.push(tarr);
                     }
-
-
                 }
+
+                $('#class_array_div').append(
+                    '<ul class="'+dofusClasses[i]+'_spell_image_list class_spell_image_list"></ul>'
+                );
+
                 for (i in classProperties) {
 
                     console.log(classProperties[i]);
-                    $('#class_array').append(
+                    $('.'+dofusClasses[i]+'_spell_image_list').append(
                         '<li><img src="'+classProperties[i]['image_link']+'"></li>'
                     );
                 }
