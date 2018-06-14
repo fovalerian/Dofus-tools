@@ -2,6 +2,7 @@
   margin-left: auto;
   margin-right: auto;
   width: 70%;
+  float: right;
 }
 
 #divLignes { /*ligneDommage*/
@@ -36,4 +37,20 @@
 
 .class_spell_image_list {
     display: none;
+}
+
+.class_image {
+    height: 50px;
+    display: block;
+}
+
+.class_icon_div {
+    overflow-y: scroll;
+    height: 450px;
+    float: right;
+}
+
+.class_image_li {
+    height: 50px;
+    list-style:none;
 }
