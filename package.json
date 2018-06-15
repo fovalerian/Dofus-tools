@@ -3,11 +3,13 @@
     "version": "0.1.0",
     "dependencies": {
         "body-parser": "~1.10.1",
+        "cheerio": "^1.0.0-rc.2",
         "cookie-session": "~1.1.0",
         "ejs": "~2.1.4",
         "express": "^4.11.2",
         "path": "^0.12.7",
         "pm2": "^2.10.4",
+        "request": "^2.87.0",
         "twig": "^1.11.1"
     },
     "author": "Louva <val.fournaise@gmail.com>",
