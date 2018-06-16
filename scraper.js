@@ -21,6 +21,7 @@ dofusIdClasses = [
   '17-huppermage',
   '18-ouginak'
 ];
+
 for (i in dofusIdClasses) {
   request({
     uri: "https://www.dofus.com/fr/mmorpg/encyclopedie/classes/"+i,
@@ -28,4 +29,4 @@ for (i in dofusIdClasses) {
     console.log(body);
     var $ = cheerio.load(body);
   });
-};
+}
