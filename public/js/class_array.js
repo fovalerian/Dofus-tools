@@ -39,8 +39,6 @@ $(document).ready(function() {
                 '<ul class="class_image_list"></ul>'
             );
 
-            console.log(tarr);
-
             j = 0;
             for (i in dofusClasses) {
                 $(".class_image_list").append(
@@ -51,8 +49,8 @@ $(document).ready(function() {
         }
     });
 
-    for (i in dofusClasses) {
-        var classProperties = [];
+    // for (i in dofusClasses) {
+    //     var classProperties = [];
 
         // $.ajax({
         //     type: "GET",
@@ -87,6 +85,6 @@ $(document).ready(function() {
         //
         //     }
         // });
-    }
+    // }
 
 });

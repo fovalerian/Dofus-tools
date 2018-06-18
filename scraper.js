@@ -29,4 +29,4 @@ for (i in dofusIdClasses) {
     console.log(body);
     var $ = cheerio.load(body);
   });
-};
+}
