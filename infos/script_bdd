@@ -1,190 +1,85 @@
 #------------------------------------------------------------
-
 #        Script MySQL.
-
 #------------------------------------------------------------
 
-
-
-
-
 #------------------------------------------------------------
-
 # Table: breed
-
 #------------------------------------------------------------
-
-
 
 CREATE TABLE breed(
-
         ref        Varchar (50) NOT NULL ,
-
         class_id   Int  Auto_increment  NOT NULL ,
-
         image_link Varchar (50) NOT NULL
-
 	,CONSTRAINT breed_PK PRIMARY KEY (ref)
-
 )ENGINE=InnoDB;
 
-
-
-
-
 #------------------------------------------------------------
-
 # Table: spell
-
 #------------------------------------------------------------
-
-
 
 CREATE TABLE spell(
-
         spell_id    Int  Auto_increment  NOT NULL ,
-
         ref         Varchar (80) NOT NULL ,
-
         image_link  Varchar (255) NOT NULL ,
-
         description Longtext NOT NULL ,
-
         is_variant  Bool NOT NULL ,
-
         ref_breed   Varchar (50)
-
 	,CONSTRAINT spell_PK PRIMARY KEY (spell_id)
-
-
-
 	,CONSTRAINT spell_breed_FK FOREIGN KEY (ref_breed) REFERENCES breed(ref)
-
 )ENGINE=InnoDB;
 
-
-
-
-
 #------------------------------------------------------------
-
 # Table: buff
-
 #------------------------------------------------------------
-
-
 
 CREATE TABLE buff(
-
         buff_id        Int  Auto_increment  NOT NULL ,
-
-        buff_type      Varchar (80) NOT NULL ,
-
-        crit_buff_type Varchar (80) NOT NULL ,
-
-        buff_value_min Int NOT NULL ,
-
-        buff_value_max Int NOT NULL ,
-
-        crit_value_max Int NOT NULL ,
-
-        crit_value_min Int NOT NULL
-
+        buff_type      Varchar (80) ,
+        crit_buff_type Varchar (80) ,
+        buff_value_min Int ,
+        buff_value_max Int ,
+        crit_value_max Int ,
+        crit_value_min Int 
 	,CONSTRAINT buff_PK PRIMARY KEY (buff_id)
-
 )ENGINE=InnoDB;
 
-
-
-
-
 #------------------------------------------------------------
-
 # Table: damage
-
 #------------------------------------------------------------
-
-
 
 CREATE TABLE damage(
-
         damage_id             Int  Auto_increment  NOT NULL ,
-
-        damage_element        Varchar (15) NOT NULL ,
-
-        crit_damage_element   Varchar (80) NOT NULL ,
-
-        damage_value_min      Int NOT NULL ,
-
-        damage_value_max      Int NOT NULL ,
-
-        crit_damage_value_min Int NOT NULL ,
-
-        crit_damage_value_max Int NOT NULL
-
+        damage_element        Varchar (15)  ,
+        crit_damage_element   Varchar (80)  ,
+        damage_value_min      Int  ,
+        damage_value_max      Int  ,
+        crit_damage_value_min Int  ,
+        crit_damage_value_max Int 
 	,CONSTRAINT damage_PK PRIMARY KEY (damage_id)
-
 )ENGINE=InnoDB;
 
-
-
-
-
+#------------------------------------------------------------
+# Table: spell_damage
 #------------------------------------------------------------
 
-# Table: damager
-
-#------------------------------------------------------------
-
-
-
-CREATE TABLE damager(
-
-        damage_id Int NOT NULL ,
-
+CREATE TABLE spell_damage(
+        damage_id Int  NOT NULL,
         spell_id  Int NOT NULL ,
-
-        rank      TinyINT NOT NULL
-
+        rank      TinyINT 
 	,CONSTRAINT damager_PK PRIMARY KEY (damage_id,spell_id)
-
-
-
 	,CONSTRAINT damager_damage_FK FOREIGN KEY (damage_id) REFERENCES damage(damage_id)
-
 	,CONSTRAINT damager_spell0_FK FOREIGN KEY (spell_id) REFERENCES spell(spell_id)
-
 )ENGINE=InnoDB;
 
-
-
-
-
+#------------------------------------------------------------
+# Table: spell_buff
 #------------------------------------------------------------
 
-# Table: buffer
-
-#------------------------------------------------------------
-
-
-
-CREATE TABLE buffer(
-
+CREATE TABLE spell_buff(
         buff_id  Int NOT NULL ,
-
         spell_id Int NOT NULL ,
-
-        rank     TinyINT NOT NULL
-
+        rank     TinyINT 
 	,CONSTRAINT buffer_PK PRIMARY KEY (buff_id,spell_id)
-
-
-
 	,CONSTRAINT buffer_buff_FK FOREIGN KEY (buff_id) REFERENCES buff(buff_id)
-
 	,CONSTRAINT buffer_spell0_FK FOREIGN KEY (spell_id) REFERENCES spell(spell_id)
-
 )ENGINE=InnoDB;
-
-
-
