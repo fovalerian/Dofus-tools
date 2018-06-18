@@ -2,8 +2,8 @@ var method = Spells.prototype;
 var Damage = require('./damage.js');
 
 class Spells {
-    constructor(damage,name,buff) {
-        this.damage = new Damage(damage);
+    constructor(effects,name,buff) {
+        this.effects = new Damage(effects);
         this.name = name;
         this.buff = buff;
     };
